@@ -1,11 +1,16 @@
 function solution(s){
-    let answer = true;
-    s = s.toUpperCase();
-    let num = 0;
-    for(let i = 0; i < s.length; i++) {
-        if(s[i] === 'P') num++;
-        if(s[i] === 'Y') num--;
+  var answer = true;
+  let p = 0;
+  let y = 0;
+  s = s.toUpperCase();
+  for(let i = 0; i <= s.length; i++){
+    if(s[i] === "P") p++;
+    if(s[i] === "Y") y++;
+  }
+    if(p === y){
+      answer = true;
+    } else {
+      answer = false;
     }
-    answer = ( num === 0);
-    return answer;
+  return answer;
 }
